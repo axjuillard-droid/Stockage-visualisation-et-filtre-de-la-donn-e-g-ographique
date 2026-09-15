@@ -1,0 +1,98 @@
+# ─────────────────────────────────────────────────────────────
+#  .gitignore — Projet GéoTraces Avions
+#  Stack : Python/FastAPI · PostgreSQL/PostGIS · React/Vite/TS
+# ─────────────────────────────────────────────────────────────
+
+# ── Secrets / Environnement ───────────────────────────────────
+.env
+.env.*
+!.env.example          # garder le template de référence
+
+# ── Python ────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+*.egg
+.eggs/
+build/
+dist/
+sdist/
+wheels/
+pip-wheel-metadata/
+*.whl
+
+# Environnements virtuels
+.venv/
+venv/
+env/
+.virtualenv/
+
+# Tests & couverture
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+.tox/
+.nox/
+
+# mypy / pyright / ruff
+.mypy_cache/
+.ruff_cache/
+.pyright/
+
+# ── Node / Frontend ───────────────────────────────────────────
+node_modules/
+frontend/node_modules/
+
+# Artéfacts de build Vite/TS
+frontend/dist/
+frontend/.tsbuildinfo
+frontend/tsconfig.tsbuildinfo
+frontend/tsconfig.node.tsbuildinfo
+frontend/vite.config.d.ts
+frontend/vite.config.js
+
+# Cache ESLint
+.eslintcache
+frontend/.eslintcache
+
+# ── Docker ────────────────────────────────────────────────────
+# Ne pas ignorer docker-compose.yml ni les Dockerfiles (utiles au projet)
+.dockerignore
+
+# ── Base de données / Migrations ──────────────────────────────
+# Migrations Alembic : À CONSERVER (versionnées dans le repo)
+# Exclure uniquement les caches internes d'Alembic
+backend/alembic/__pycache__/
+backend/alembic/versions/__pycache__/
+
+# Dumps / exports de données locaux
+*.sql
+*.dump
+*.csv.bak
+
+# ── IDE / Éditeurs ────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# ── OS ────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# ── Outils internes (non pertinents pour le projet) ──────────
+graphify-out/
+.graphifyignore
+gene.py
+MISSION.md
+MISSION2.md

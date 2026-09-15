@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Styles globaux */
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: dark;
+  background-color: #0f172a;
+  color: #e2e8f0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #0f172a;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Override styles for the rotation popup */
+.rotation-popup .leaflet-popup-content-wrapper {
+  background: #0f172a !important; /* bg-slate-900 */
+  color: #e2e8f0 !important;
+  border: 1px solid #334155 !important; /* border-slate-700 */
+  border-radius: 0.75rem !important; /* rounded-xl */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.5) !important;
+}
+
+.rotation-popup .leaflet-popup-tip {
+  background: #0f172a !important;
+  border-left: 1px solid #334155 !important;
+  border-bottom: 1px solid #334155 !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5) !important;
+}
+
+.rotation-popup .leaflet-popup-close-button {
+  color: #94a3b8 !important; /* text-slate-400 */
+  padding: 8px 12px 0 0 !important;
+}
+
+.rotation-popup .leaflet-popup-content {
+  margin: 0 !important;
+}
+
+/* Animation pour le panneau de contrôle inférieur */
+@keyframes slide-up {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+

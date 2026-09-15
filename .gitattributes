@@ -1,0 +1,13 @@
+# Normaliser les fins de ligne en LF dans le repo (cross-platform)
+* text=auto eol=lf
+
+# Fichiers binaires — ne pas modifier les fins de ligne
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.webp binary
+*.pdf binary
+*.whl binary
+*.exe binary
