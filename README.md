@@ -4,6 +4,24 @@ Application full-stack permettant d'**importer, stocker, filtrer et visualiser**
 
 ---
 
+## 🖼️ Aperçu de l'interface
+
+### 🗺️ Mode carte — Visualisation et filtrage géographique
+
+![Mode carte avec filtrage géographique](geo_mode_bdd.png)
+
+> Vue principale de l'application. L'utilisateur peut **dessiner une zone géographique** (rectangle, polygone…) directement sur la carte Leaflet pour filtrer les traces de vols. Le panneau latéral droit permet de régler la **plage d'altitude** (slider interactif), de consulter les **zones actives**, et de lancer le filtrage. Les vols retenus sont mis en évidence sur la carte avec leurs trajectoires colorées. Un résumé rapide (zones actives, emprises en base, vols retenus) s'affiche sous forme de badges en haut de la carte.
+
+---
+
+### 🗄️ Mode Gérer BDD — Gestion de la base de données
+
+![Tableau de bord de gestion de la base de données](gérer_bdd.png)
+
+> Tableau de bord dédié à la **gestion des données stockées**. Il permet d'**importer un fichier CSV** de traces de vols, de **purger la base**, et de rechercher/supprimer des vols individuellement. Des filtres avancés combinent une **période temporelle** (slider de plage de dates), une **plage d'altitude** et des **zones géographiques** (réutilisant celles dessinées sur la carte) pour affiner la liste des vols affichés dans le tableau. Chaque ligne de vol indique son identifiant, le nombre de points de trace, les dates de début/fin (UTC) et l'altitude min/max.
+
+---
+
 ## 🗂️ Table des matières
 
 - [Aperçu](#aperçu)
